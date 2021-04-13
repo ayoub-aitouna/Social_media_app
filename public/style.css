@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F0F2F5;
+    height: 100vh;
+}
+
+.container {
+    background-color: #F0F2F5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_panel {
+    background: white;
+    width: 30%;
+    min-height: 46%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.login_panel.show {
+    display: block;
+}
+
+.login_panel.hide {
+    display: none;
+}
+
+.login_panel:hover,
+.Regester_panel:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.login_panel :is(form) {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form :is(input) {
+    padding: 0 10px;
+    height: 45px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    width: 50%;
+    margin-top: 5px;
+    border: none;
+    color: white;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.Submite {
+    width: 90%;
+    background-color: #166FE5;
+}
+
+.create_account {
+    background-color: #36A420;
+}
+
+.forget {
+    margin: 10px 0;
+    color: #166FE5;
+    align-self: center;
+}
+
+.Regester_panel {
+    background-color: white;
+    width: 30%;
+    min-width: 55vh;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    display: none;
+}
+
+.Regester_panel.hide {
+    display: none;
+}
+
+.Regester_panel.show {
+    display: flex;
+}
+
+.Regester_panel form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.day,
+.year,
+.month {
+    height: 2rem;
+}
+
+.gender_item {
+    margin: 0 10px;
+    width: 15vh;
+    height: 5vh;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Regester_panel * {
+    margin: 5px;
+}
+
+.name,
+.pass {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.name :is(input),
+.pass :is(input) {
+    width: 100%;
+}
+
+.email_re {
+    width: 100%;
+    margin: 0 0 0 3%;
+    align-self: center;
+}
+
+.gender {
+    display: flex;
+    flex-direction: row;
+}

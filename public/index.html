@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>YouDm</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login_panel">
+            <form action="http://localhost/Social_media_app/public/php/login.php" method="POST" id="form_login">
+                <div class="error"></div>
+                <input type="text" name="email_user" id="" placeholder="Email adress" class="email">
+                <input type="password" name="Password" id="" class="password" placeholder="Password">
+                <input type="submit" value="Login" id="login" class="Submite button">
+                <p class="forget">Forgotten password?</p>
+                <hr>
+                <input type="button" value="Create an Account" id="create" class="create_account button">
+                </input>
+            </form>
+        </div>
+        <div class="Regester_panel">
+            <form action="http://localhost/Social_media_app/public/php/regester.php" method="POST">
+                <div class="Reerror"></div>
+
+                <div class="name">
+                    <input type="text" placeholder="User name" name="username" class="user">
+                    <input type="text" name="fullname" placeholder="Full name" class="fullname">
+                </div>
+                <input type="email" name="email" placeholder="Email" class="email_re">
+                <div class="pass">
+                    <input type="password" name="password" placeholder="Password" class="password_re">
+                    <input type="password" name="" placeholder="Renter Password" class="repassword">
+                </div>
+                <div class="birthday">
+                    <select name="day" class="day"></select>
+                    <select name="month" class="month"></select>
+                    <select name="year" class="year"></select>
+
+                    <script>
+                        let day = document.querySelector('.day');
+                        for (let i = 0; i <= 30; i++) {
+                            if (i == 0) {
+                                day.innerHTML += '<option value="">day</option>'
+                            } else {
+                                day.innerHTML += '<option value="' + i + '">' + i + '</option>'
+                            }
+                        }
+
+                        let year = document.querySelector('.year');
+                        for (let i = 100; i >= 0; i--) {
+                            if (i == 100) {
+                                year.innerHTML += '<option value="">Year</option>'
+                            } else {
+                                year_ = new Date().getFullYear() - i;
+                                year.innerHTML += '<option value="' + year_ + '">' + year_ + '</option>'
+                            }
+                        }
+                        const monthNames = ["January", "February", "March", "April", "May", "June",
+                            "July", "August", "September", "October", "November", "December"
+                        ];
+                        let month = document.querySelector('.month');
+
+                        for (let i = 0; i <= 12; i++) {
+                            if (i == 0) {
+                                month.innerHTML += '<option value="">Month</option>'
+                            } else {
+                                month.innerHTML += '<option value="' + i + '">' + monthNames[i - 1] + '</option>'
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="gender">
+                    <h5>Gender</h5>
+                    <div class="f gender_item">
+                        <label for="">Famel</label>
+                        <input type="radio" name="gender" value="F">
+                    </div>
+                    <div class="m gender_item">
+                        <label for="">Male</label>
+                        <input type="radio" name="gender" value="M">
+                    </div>
+                </div>
+                <input type="submit" value="Create" id="Regester_sub" class="create_account button">
+                <h5>I Already have an account. <a href="index.html" id="link">Sing in</a></h5>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
